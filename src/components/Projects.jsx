@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion';
 
 const Projects = () => {
+
+    const snapshotVideos = [
+        { videoId: 'ugkbmyZDq-g', caption: 'Horror like game. Infinity floors' },
+        { videoId: 'MEPLc65_d2k', caption: 'Isometric. Displacement along the axis of movement' },
+        { videoId: 'AjQANLxZhhw', caption: 'Mario like game. Joints' },
+        { videoId: 'dW5DxvLuQuk ', caption: 'Mesh generation. Prefabs are prohibited.' },
+    ];
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -21,46 +29,62 @@ const Projects = () => {
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >Projects</h1>
-            <h2 style={{
-                color: '#000000',
-                fontSize: '1.5em',
-                marginTop: '20px',
-                marginBottom: '10px',
-                fontWeight: 'bold',
-                transition: 'color 0.3s ease'
-            }}>3D Rogue-Like Shooter</h2>
-            <p style={{
-                color: '#000000',
-                fontSize: '1.1em',
-                marginBottom: '20px',
-                lineHeight: '1.6',
-                transition: 'opacity 0.3s ease'
-            }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
-            >
-                Currently developing a 3D rogue-like shooter as an indie game developer. This project features procedurally generated levels, dynamic AI enemies, and a unique art style inspired by classic shooters. Built using Unity and C#, with plans to release on Steam in 2025.
-            </p>
-            <h2 style={{
-                color: '#000000',
-                fontSize: '1.5em',
-                marginTop: '20px',
-                marginBottom: '10px',
-                fontWeight: 'bold',
-                transition: 'color 0.3s ease'
-            }}>Previous Software Projects</h2>
-            <p style={{
-                color: '#000000',
-                fontSize: '1.1em',
-                marginBottom: '20px',
-                lineHeight: '1.6',
-                transition: 'opacity 0.3s ease'
-            }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
-            >
-                Developed several backend systems and APIs during my software engineering career, including a customer management system and a real-time data processing tool, both written in Python and deployed on AWS.
-            </p>
+
+            {/* Pet Projects Section */}
+            <section className="pet-projects">
+                <h2 className="project-title">Still alive (current project)</h2>
+                <div className="project-video">
+                    <iframe
+                        width="100%"
+                        height="315"
+                        src="https://www.youtube.com/embed/Qqc1XkinqSE"
+                        title="3D Rogue-Like Shooter Demo"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                </div>
+                <p className="project-desc">
+                    Currently developing a 3D rogue-like shooter. This will be dynamic shooter with evolving player progression. Built using Unity and C#, with plans to release on Steam.
+                </p>
+
+                <h2 className="project-title">Count Battle</h2>
+                <div className="project-video">
+                    <iframe
+                        width="100%"
+                        height="315"
+                        src="https://www.youtube.com/embed/pz97QR2lGuQ"
+                        title="Second Project Demo"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                </div>
+                <p className="project-desc">
+                    A casual game where you pick the right answer to simple equations. Perfect for kids and students to practice math, or adults looking to test their school-day memory.
+                </p>
+            </section>
+
+            {/* Homework Videos Section */}
+            <section className="homework-videos">
+                <h2 className="project-title">Primitive Game Mechanics Experience</h2>
+                <div className="video-grid">
+                    {snapshotVideos.map((video, i) => (
+                        <div key={i} className="video-item">
+                            <iframe
+                                width="100%"
+                                height="150"
+                                src={`https://www.youtube.com/embed/${video.videoId}`}
+                                title={`Experience ${i + 1}`}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                            <p className="video-caption">{video.caption}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
         </motion.div>
     );
 };
