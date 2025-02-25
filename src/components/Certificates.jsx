@@ -14,25 +14,25 @@ const Certificates = () => {
 
     const certificateData = {
         "Game Development": [
-            { src: "/public/images/cetificates/Mobile Game Development With Unity.jpg", title: "Mobile Game Development With Unity" }
+            { src: "/My-CV/public/images/cetificates/Mobile Game Development With Unity.jpg", title: "Mobile Game Development With Unity" }
         ],
         "Programming Languages": [
-            { src: "/public/images/cetificates/Programming with Javascript.jpeg", title: "Programming with Javascript" },
-            { src: "/public/images/cetificates/Understanding Typescript.jpg", title: "Understanding Typescript" }
+            { src: "/My-CV/public/images/cetificates/Programming with Javascript.jpeg", title: "Programming with Javascript" },
+            { src: "/My-CV/public/images/cetificates/Understanding Typescript.jpg", title: "Understanding Typescript" }
         ],
         "Web Development": [
-            { src: "/public/images/cetificates/Introduction to Front-End Development.jpeg", title: "Introduction to Front-End Development" },
-            { src: "/public/images/cetificates/HTML and CSS in depth.jpeg", title: "HTML and CSS in depth" },
-            { src: "/public/images/cetificates/React Basics.jpeg", title: "React Basics" },
-            { src: "/public/images/cetificates/Advanced React.jpeg", title: "Advanced React" },
-            { src: "/public/images/cetificates/The Web Developer Bootcamp 2022.png", title: "The Web Developer Bootcamp 2022" }
+            { src: "/My-CV/public/images/cetificates/Introduction to Front-End Development.jpeg", title: "Introduction to Front-End Development" },
+            { src: "/My-CV/public/images/cetificates/HTML and CSS in depth.jpeg", title: "HTML and CSS in depth" },
+            { src: "/My-CV/public/images/cetificates/React Basics.jpeg", title: "React Basics" },
+            { src: "/My-CV/public/images/cetificates/Advanced React.jpeg", title: "Advanced React" },
+            { src: "/My-CV/public/images/cetificates/The Web Developer Bootcamp 2022.png", title: "The Web Developer Bootcamp 2022" }
         ],
         "Version Control": [
-            { src: "/public/images/cetificates/Version Control.jpeg", title: "Version Control" }
+            { src: "/My-CV/public/images/cetificates/Version Control.jpeg", title: "Version Control" }
         ],
         "English": [
-            { src: "/public/images/cetificates/b1.jpg", title: "Intermediate (B1)" },
-            { src: "/public/images/cetificates/b2.jpg", title: "Upper Intermediate (B2)" }
+            { src: "/My-CV/public/images/cetificates/b1.jpg", title: "Intermediate (B1)" },
+            { src: "/My-CV/public/images/cetificates/b2.jpg", title: "Upper Intermediate (B2)" }
         ]
     };
 

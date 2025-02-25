@@ -23,7 +23,7 @@ const ProfileCard = () => {
             }}
         >
             <img
-                src="/public/images/photo.jpg"
+                src="/My-CV/public/images/photo.jpg"
                 alt="Aleh Kushniarou"
                 className="profile-image"
                 style={{
