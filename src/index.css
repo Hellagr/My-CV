@@ -1,0 +1,599 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+  color: #000000;
+}
+
+.header {
+  padding: 15px 0;
+  background-color: #ffffff;
+  /* border-bottom: 1px solid #eeeeee; */
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #0056b3;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+  margin-top: 80px; /* Offset for fixed header */
+}
+
+.profile-card {
+  background-color: #e9e8e2;
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  width: 300px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-2px); /* Subtler lift */
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.02); /* Subtler scale */
+}
+
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.social-links a {
+  margin: 0 3px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+.welcome-section {
+  max-width: 600px;
+  text-align: center;
+  padding-left: 50px;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.welcome-section:hover {
+  transform: translateY(-2px); /* Subtler lift */
+}
+
+.welcome-section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #000000;
+  font-weight: bold;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.welcome-section h1:hover {
+  transform: scale(1.02);
+}
+
+.welcome-section .buttons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.welcome-section .buttons button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.welcome-section .buttons button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+  transform: scale(1.05); /* Subtler scale */
+}
+
+.welcome-section .buttons button:active {
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+  transform: scale(0.98);
+}
+
+.welcome-section p {
+  color: #000000;
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 10px;
+  transition: opacity 0.3s ease;
+}
+
+.welcome-section p:hover {
+  opacity: 0.9; /* Subtler opacity */
+}
+
+/* Additional Pages Styling (AboutMe, Resume, Projects, Contact) */
+.page-content {
+  max-width: 800px;
+  margin: 20px auto 20px;
+  padding: 20px 20px 40px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* .page-content:hover { */
+/* transform: translateY(-2px); Subtler lift */
+/* } */
+
+.page-content h1 {
+  color: #007bff;
+  font-size: 2.5em;
+  margin-bottom: 25px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.page-content h1:hover {
+  transform: scale(1.02);
+}
+
+.page-content h2 {
+  color: #000000;
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.page-content h2:hover {
+  color: #007bff;
+}
+
+.page-content h3 {
+  color: #007bff;
+  font-size: 1.3em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.page-content h3:hover {
+  color: #0056b3;
+}
+
+.page-content p {
+  color: #000000;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.page-content p:hover {
+  opacity: 0.9; /* Subtler opacity */
+}
+
+.page-content ul {
+  color: #000000;
+  font-size: 1.1em;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  transition: opacity 0.3s ease;
+}
+
+.page-content ul:hover {
+  opacity: 0.9; /* Subtler opacity */
+}
+
+.page-content li {
+  margin-bottom: 10px;
+}
+
+.page-content a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.page-content a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .nav h1 {
+    font-size: 1.2em;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .nav-links li a {
+    font-size: 0.9em;
+  }
+
+  .content {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .welcome-section {
+    padding-left: 0;
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  .welcome-section h1 {
+    font-size: 2em;
+  }
+
+  .welcome-section .buttons {
+    gap: 8px;
+  }
+
+  .welcome-section .buttons button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .welcome-section p {
+    font-size: 0.9em;
+  }
+
+  .page-content {
+    margin: 100px auto 20px;
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .page-content h1 {
+    font-size: 2em;
+  }
+
+  .page-content h2,
+  .page-content h3 {
+    font-size: 1.2em;
+  }
+
+  .page-content p,
+  .page-content li {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav h1 {
+    font-size: 1em;
+  }
+
+  .nav-links {
+    gap: 5px;
+  }
+
+  .nav-links li a {
+    font-size: 0.8em;
+  }
+
+  .profile-card {
+    max-width: 250px;
+  }
+
+  .welcome-section h1 {
+    font-size: 1.5em;
+  }
+
+  .welcome-section .buttons button {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+
+  .welcome-section p {
+    font-size: 0.8em;
+  }
+
+  .page-content {
+    margin: 90px auto 10px;
+    padding: 10px;
+    max-width: 85%;
+  }
+
+  .page-content h1 {
+    font-size: 1.5em;
+  }
+
+  .page-content h2,
+  .page-content h3 {
+    font-size: 1em;
+  }
+
+  .page-content p,
+  .page-content li {
+    font-size: 0.9em;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Default (Light Mode) */
+:root {
+  --header-bg: #ffffff;
+  --card-bg: #fff5ed;
+  --text-primary: #000000;
+  --text-secondary: #5f5f5f;
+  --accent-color: #007bff;
+  --border-color: #000000;
+  --background: #ffffff;
+  --button-bg: #ffffff;
+}
+
+/* Dark Mode */
+.dark {
+  --header-bg: #1a1a1a;
+  --card-bg: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --accent-color: #1e90ff;
+  --border-color: #ffffff;
+  --background: #121212;
+  --button-bg: #333333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  line-height: 1.6;
+  overflow-x: hidden;
+  color: var(--text-primary);
+}
+
+.App {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+/* ProfileCard Overrides */
+.profile-card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary);
+}
+
+.profile-card h2 {
+  color: var(--text-primary) !important;
+}
+
+.profile-card p {
+  color: var(--text-secondary) !important;
+}
+
+.profile-card .social-links a {
+  color: var(--text-primary) !important;
+}
+
+.profile-card .social-links a:hover {
+  color: var(--accent-color) !important;
+}
+
+.profile-card img {
+  border-color: var(--border-color) !important;
+}
+
+.profile-card div[style*="backgroundColor: '#007BFF'"] {
+  background-color: var(--accent-color) !important;
+}
+
+/* Header Overrides */
+.header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header h1 {
+  color: var(--text-primary) !important;
+}
+
+.header div[style*="color: '#777'"] {
+  color: var(--text-secondary) !important;
+}
+
+.header .nav-links a {
+  color: var(--text-primary) !important;
+}
+
+.header .nav-links a:hover {
+  color: var(--accent-color) !important;
+}
+
+/* WelcomeSection Overrides */
+.welcome-section {
+  color: var(--text-primary);
+}
+
+.welcome-section h1 {
+  color: var(--text-primary) !important;
+}
+
+.welcome-section p {
+  color: var(--text-primary) !important;
+}
+
+.welcome-section button {
+  background-color: var(--button-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.welcome-section button:hover {
+  background-color: var(--accent-color) !important;
+  color: #ffffff !important;
+}
+
+/* General Page Content Overrides */
+.page-content {
+  background-color: var(--background) !important;
+  color: var(--text-primary);
+}
+
+.page-content h1 {
+  color: var(--accent-color) !important;
+}
+
+.page-content h2 {
+  color: var(--text-primary) !important;
+}
+
+.page-content h3 {
+  color: var(--accent-color) !important;
+}
+
+.page-content p {
+  color: var(--text-primary) !important;
+}
+
+.page-content a {
+  color: var(--accent-color) !important;
+}
+
+.page-content a:hover {
+  color: var(--text-primary) !important;
+}
+
+/* Certificates Specific Overrides */
+.page-content div[style*="background: '#fff'"] {
+  background: var(--card-bg) !important;
+}
+
+.page-content p[style*="color: '#555'"] {
+  color: var(--text-secondary) !important;
+}
+
+/* Resume Specific Overrides */
+.page-content ul[style*="color: '#000000'"] {
+  color: var(--text-primary) !important; /* Override inline #000000 */
+}
+
+/* Footer Overrides */
+.footer {
+  background-color: var(--header-bg) !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.footer p {
+  color: var(--text-primary) !important;
+}
+
+.content {
+  background-color: var(--background);
+}
