@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Hellagr.github.io/",
+  "homepage": "https://Hellagr.github.io/My-CV",
   "scripts": {
     "dev": "vite",
     "lint": "eslint .",
