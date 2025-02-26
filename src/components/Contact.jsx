@@ -44,7 +44,7 @@ const Contact = () => {
                 onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
             >
                 <strong>Email:</strong> alehkushniarou@gmail.com<br />
-                <strong>Phone:</strong> +375 (44) 543-50-47<br />
+                <strong>Phone:</strong> +375 (44) 768-01-77<br />
                 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aleh-kushniarou-18996a254/" target="_blank" style={{ color: '#007BFF', textDecoration: 'none', transition: 'color 0.3s ease' }}>Aleh Kushniarou</a><br />
                 <strong>Telegram:</strong> <a href="https://t.me/Hellagrr" target="_blank" style={{ color: '#007BFF', textDecoration: 'none', transition: 'color 0.3s ease' }}>@Hellagrr</a>
             </p>
