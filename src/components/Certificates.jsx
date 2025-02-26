@@ -64,7 +64,7 @@ const Certificates = () => {
             </h1>
 
             {Object.entries(certificateData).map(([category, certs]) => (
-                <div key={category} style={{ marginBottom: '40px' }}>
+                <div key={category}>
                     <h2
                         style={{
                             color: 'var(--text-primary)', // Updated to theme variable
@@ -79,13 +79,13 @@ const Certificates = () => {
                     >
                         {category}
                     </h2>
-                    <div
-                        style={{
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            gap: '15px',
-                            padding: '0 10px'
-                        }}
+                    <div className='certsBlocks'
+                    // style={{
+                    //     display: 'flex',
+                    //     flexWrap: 'wrap',
+                    //     gap: '15px',
+                    //     padding: '0 10px'
+                    // }}
                     >
                         {certs.map((cert, index) => (
                             <div

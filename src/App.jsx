@@ -12,14 +12,12 @@ import './index.css';
 
 function App() {
   const [theme, setTheme] = useState(() => {
-    // Initial theme based on system preference
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark';
     }
     return 'light';
   });
 
-  // Sync with system theme changes
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e) => setTheme(e.matches ? 'dark' : 'light');
@@ -28,15 +26,30 @@ function App() {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  // Toggle theme manually
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
-
-  // Apply theme class to root
   useEffect(() => {
     document.documentElement.className = theme;
   }, [theme]);
+
+  // Prevent resizing below 385px
+  useEffect(() => {
+    const enforceMinWidth = () => {
+      if (window.innerWidth < 385) {
+        document.body.style.width = '385px';
+        document.body.style.overflowX = 'hidden';
+      } else {
+        document.body.style.width = 'auto';
+      }
+    };
+
+    window.addEventListener('resize', enforceMinWidth);
+    enforceMinWidth(); // Call once to apply immediately
+
+    return () => window.removeEventListener('resize', enforceMinWidth);
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
 
   return (
     <Router>
@@ -44,9 +57,10 @@ function App() {
         className="App"
         style={{
           maxWidth: '1200px',
+          minWidth: '385px', // Ensures the app container doesn't shrink
           margin: '0 auto',
           minHeight: '100vh',
-          backgroundColor: 'var(--background)' // Theme variable
+          backgroundColor: 'var(--background)',
         }}
       >
         <Header toggleTheme={toggleTheme} theme={theme} />
@@ -61,8 +75,7 @@ function App() {
                   justifyContent: 'space-between',
                   padding: '50px 20px',
                   backgroundColor: 'var(--background)',
-                  flexWrap: 'wrap',
-                  marginTop: '80px'
+                  marginTop: '80px',
                 }}
               >
                 <ProfileCard />

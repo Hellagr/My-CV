@@ -15,6 +15,7 @@ const ProfileCard = () => {
                 padding: '30px',
                 borderRadius: '5px',
                 width: '350px',
+                height: '450px',
                 textAlign: 'center',
                 position: 'relative',
                 zIndex: 1,

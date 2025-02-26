@@ -11,7 +11,7 @@ const WelcomeSection = () => {
             style={{
                 maxWidth: '600px',
                 textAlign: 'center',
-                paddingLeft: '50px',
+                // paddingLeft: '50px',
                 marginTop: '60px',
                 fontFamily: 'Arial, sans-serif'
             }}
@@ -133,8 +133,8 @@ const WelcomeSection = () => {
                     fontWeight: '300',
                     transition: 'opacity 0.3s ease'
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.9')}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+            // onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.9')}
+            // onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
             >
                 Seeking entry-level developer roles, including trainee positions. Just starting out after switching careers to game development which I consider my passion. Currently I’m working on a 3D rogue-like shooter as an indie dev.
             </p>
