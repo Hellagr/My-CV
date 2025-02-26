@@ -357,11 +357,24 @@ body {
   margin-bottom: 20px;
   line-height: 1.5;
   transition: opacity 0.3s ease;
+  color: var(--text-secondary) !important; /* #333333 in light mode */
 }
 
-.page-content ul:hover {
-  opacity: 0.9; /* Subtler opacity */
+.dark .page-content ul {
+  color: var(--text-secondary) !important; /* #b0b0b0 in dark mode */
 }
+
+.page-content ul a {
+  color: var(--accent-color) !important;
+}
+
+.page-content ul a:hover {
+  color: var(--text-primary) !important;
+}
+
+/* .page-content ul:hover {
+  opacity: 0.9;
+} */
 
 .page-content li {
   margin-bottom: 10px;
@@ -541,7 +554,7 @@ body {
   --header-bg: #ffffff;
   --card-bg: #fff5ed;
   --text-primary: #000000;
-  --text-secondary: #5f5f5f;
+  --text-secondary: #000000; /* Darker gray for light mode readability */
   --accent-color: #007bff;
   --border-color: #000000;
   --background: #ffffff;
@@ -553,7 +566,7 @@ body {
   --header-bg: #1a1a1a;
   --card-bg: #2a2a2a;
   --text-primary: #ffffff;
-  --text-secondary: #b0b0b0;
+  --text-secondary: #ffffff; /* Light gray for dark mode */
   --accent-color: #1e90ff;
   --border-color: #ffffff;
   --background: #121212;
@@ -651,10 +664,10 @@ body {
   color: #ffffff !important;
 }
 
-/* General Page Content Overrides */
+/* Ensure page-content respects theme */
 .page-content {
   background-color: var(--background) !important;
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
 }
 
 .page-content h1 {

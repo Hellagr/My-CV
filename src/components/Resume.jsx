@@ -97,7 +97,7 @@ const Resume = () => {
                         System Administrator
                     </h3>
                     <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0 0 2px', fontStyle: 'italic' }}>
-                        Minsk | 2024 – Present
+                        OOO «Boho studio», Minsk | 2024 – Present
                     </p>
                     <p style={{ color: '#D0D0D0', fontSize: '0.9em', lineHeight: '1.3', margin: '0' }}>
                         Maintain PC software functionality and resolve OS issues, ensuring seamless system performance through proactive support and troubleshooting.
@@ -134,7 +134,7 @@ const Resume = () => {
                             color: '#1E90FF',
                             fontSize: '1.5em',
                             margin: '0 0 6px',
-                            fontWeight: '500',
+                            fontWeight: '600',
                             borderBottom: '1px solid #3A3A3A',
                             paddingBottom: '2px',
                         }}
@@ -143,7 +143,7 @@ const Resume = () => {
                     </h2>
                     <div style={{ marginBottom: '8px' }}>
                         <h3 style={{ color: '#FFFFFF', fontSize: '1.1em', margin: '0 0 2px', fontWeight: '600' }}>
-                            B.S. Mechanical Engineering
+                            Mechanical-Engineering
                         </h3>
                         <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0', fontStyle: 'italic' }}>
                             BNTU, Minsk | 2012 – 2018
@@ -151,7 +151,7 @@ const Resume = () => {
                     </div>
                     <div>
                         <h3 style={{ color: '#FFFFFF', fontSize: '1.1em', margin: '0 0 2px', fontWeight: '600' }}>
-                            Electronics Eng. (Incomplete)
+                            Engineer in radio electronics (Incomplete)
                         </h3>
                         <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0', fontStyle: 'italic' }}>
                             BSUIR, Minsk | 1 Year
@@ -173,7 +173,6 @@ const Resume = () => {
                     </h2>
                     <ul
                         style={{
-                            color: '#D0D0D0',
                             fontSize: '0.85em',
                             listStyleType: 'none',
                             paddingLeft: '0',
@@ -181,7 +180,7 @@ const Resume = () => {
                             lineHeight: '1.4',
                             columnCount: 2,
                             columnGap: '15px',
-                            columnWidth: 'auto', // Ensure clean column breaks
+                            columnWidth: 'auto',
                         }}
                     >
                         <li>Unity Game Dev – <a href="https://www.linkedin.com/feed/update/urn:li:activity:7294752105150513153/" style={{ color: '#1E90FF' }}>Cert</a></li>
@@ -313,7 +312,6 @@ const Resume = () => {
                     </h2>
                     <ul
                         style={{
-                            color: '#D0D0D0',
                             fontSize: '0.9em',
                             listStyleType: 'none',
                             paddingLeft: '0',
@@ -343,7 +341,6 @@ const Resume = () => {
                     </h2>
                     <ul
                         style={{
-                            color: '#D0D0D0',
                             fontSize: '0.9em',
                             listStyleType: 'none',
                             paddingLeft: '0',
