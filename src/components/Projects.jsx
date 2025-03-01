@@ -59,7 +59,6 @@ const Projects = () => {
                         height="315"
                         src="https://www.youtube.com/embed/pz97QR2lGuQ?modestbranding=1&rel=0"
                         title="Second Project Demo"
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>

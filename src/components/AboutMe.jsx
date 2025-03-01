@@ -41,6 +41,7 @@ const AboutMe = () => {
                     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
                 }}
             />
+            <br />
             <p style={{
                 color: '#000000',
                 fontSize: '1.1em',
@@ -48,7 +49,6 @@ const AboutMe = () => {
                 marginBottom: '20px',
                 // transition: 'opacity 0.3s ease'
             }}>
-                Nowadays, I have a tremendous amount of experience with different genres of games, which gives me a clear understanding of what players want to see in a game and how it should work.
                 During my school days, we had a Coding Club at school where we were introduced to programming with Delphi. There was also an Adobe Flash Animation Club, but for some reason, those clubs were closed. Then, at university, I was introduced to the C language, but due to my laziness, I was excluded from the program. Later, I finished a technical university and earned a Mechanical Engineering degree.
                 Time passed, and one day I realized I wanted a job where I would always gain new knowledge and have the possibility to work from any part of the world. Getting back to business, I began reading the book Head First Java and watching English videos on YouTube. Realizing that I liked solving logic tasks, and with encouragement from my brother’s, I kept going to learn coding.
                 After finishing a Boot Camp Web Development course on Udemy, I made a couple of websites and continued learning English through offline courses, where I successfully achieved a B2 level. I also completed a bunch of different courses on web development. Then I started solving tasks on the LeetCode site and really enjoyed learning that.
@@ -101,6 +101,16 @@ const AboutMe = () => {
                     }}
                 />
             </div>
+
+            <p style={{
+                color: '#000000',
+                fontSize: '1.1em',
+                lineHeight: '1.6',
+                marginBottom: '20px',
+                // transition: 'opacity 0.3s ease'
+            }}>
+                Nowadays, I have a tremendous amount of experience with different genres of games, which gives me a clear understanding of what players want to see in a game and how it should work. Still love playing video games and spend a lot of my free time on them.
+            </p>
             <p style={{
                 color: '#000000',
                 fontSize: '1.1em',
@@ -111,6 +121,24 @@ const AboutMe = () => {
                 After thinking about coding, the amount of gaming experience I had, and listening to my brother’s advice, I made a decision to take an offline course on Unity. I finished it successfully and gained a lot of interesting information that boosted me up.
                 And now, here we are—I’m currently working on a personal project and looking for my first job to improve myself infinitely.
             </p>
+            <section className="pet-projects">
+                <h2 className="project-title">Still alive (current project)</h2>
+                <div className="project-video">
+                    <iframe
+                        width="100%"
+                        height="315"
+                        src="https://www.youtube.com/embed/Qqc1XkinqSE?modestbranding=1&rel=0"
+                        title="3D Rogue-Like Shooter Demo"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                    {/* Fallback if video fails to load */}
+                    <p style={{ display: 'none', color: 'red' }} id="video-fallback">
+                        Video blocked by ad blocker. Please disable it or allow YouTube to view content.
+                    </p>
+                </div>
+            </section>
         </motion.div>
     );
 };

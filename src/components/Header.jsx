@@ -187,7 +187,7 @@ const Header = ({ toggleTheme, theme }) => {
                                     e.target.style.transform = 'scale(1)';
                                 }}
                             >
-                                Resume
+                                CV
                             </Link>
                         </li>
                         <li>

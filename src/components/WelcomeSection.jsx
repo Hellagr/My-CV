@@ -26,7 +26,7 @@ const WelcomeSection = () => {
                     textShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
                 }}
             >
-                Welcome to my personal website
+                Hi and Welcome!
             </h1>
             <div
                 className="buttons"

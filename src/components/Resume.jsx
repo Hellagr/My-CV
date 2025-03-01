@@ -4,7 +4,7 @@ const Resume = () => {
     // Functions to trigger file downloads for ENG and RU versions from the current site
     const handleDownloadEng = () => {
         // Use a relative path from the /public folder
-        const fileUrl = 'https://drive.google.com/uc?export=download&id=1eTmXiIfgwwnngmybw06Azg8A_Giu0frf'; // Path to English resume in /public/TxtResume folder
+        const fileUrl = 'https://drive.google.com/uc?export=download&id=1cYKiG_ztOWXUC4-oBHNC6gY99TETMPNZ'; // Path to English resume in /public/TxtResume folder
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = 'Aleh_Kushniarou_Resume_EN.docx'; // Updated to match .docx file extension
@@ -15,7 +15,7 @@ const Resume = () => {
 
     const handleDownloadRu = () => {
         // Use a relative path from the /public folder
-        const fileUrl = 'https://drive.google.com/uc?export=download&id=1uCnCeFu_nLYT62NRhO5z2Ud9Su_-xuTJ'; // Path to Russian resume in /public/TxtResume folder
+        const fileUrl = 'https://drive.google.com/uc?export=download&id=1OaQqa65p1ivvRRgQR150lhr1-olbPu5I'; // Path to Russian resume in /public/TxtResume folder
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = 'Aleh_Kushniarou_Resume_RU.docx'; // Updated to match .docx file extension
@@ -114,17 +114,6 @@ const Resume = () => {
                         Oversaw material procurement for production, driving efficiency with strong organizational skills.
                     </p>
                 </div>
-                <div>
-                    <h3 style={{ color: '#FFFFFF', fontSize: '1.1em', margin: '0 0 2px', fontWeight: '600' }}>
-                        Freelance Web Developer
-                    </h3>
-                    <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0 0 2px', fontStyle: 'italic' }}>
-                        Self-Employed, Minsk | 2015
-                    </p>
-                    <p style={{ color: '#D0D0D0', fontSize: '0.9em', lineHeight: '1.3', margin: '0' }}>
-                        Developed a Joomla CMS website, customizing templates with HTML and CSS.
-                    </p>
-                </div>
             </section>
 
             <section style={{ marginBottom: '15px', display: 'flex', gap: '20px' }}>
@@ -143,18 +132,18 @@ const Resume = () => {
                     </h2>
                     <div style={{ marginBottom: '8px' }}>
                         <h3 style={{ color: '#FFFFFF', fontSize: '1.1em', margin: '0 0 2px', fontWeight: '600' }}>
-                            Mechanical-Engineering
+                            BNTU
                         </h3>
                         <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0', fontStyle: 'italic' }}>
-                            BNTU, Minsk | 2012 – 2018
+                            Minsk | 2012 – 2018
                         </p>
                     </div>
                     <div>
                         <h3 style={{ color: '#FFFFFF', fontSize: '1.1em', margin: '0 0 2px', fontWeight: '600' }}>
-                            Engineer in radio electronics (Incomplete)
+                            BSUIR (Incomplete)
                         </h3>
                         <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0', fontStyle: 'italic' }}>
-                            BSUIR, Minsk | 1 Year
+                            Minsk | 1 Year
                         </p>
                     </div>
                 </div>
@@ -244,7 +233,7 @@ const Resume = () => {
                         paddingBottom: '2px',
                     }}
                 >
-                    Web Development Projects
+                    Web Projects
                 </h2>
                 <div style={{ marginBottom: '8px' }}>
                     <h3 style={{ color: '#FFFFFF', fontSize: '1.1em', margin: '0 0 2px', fontWeight: '600' }}>
@@ -268,18 +257,6 @@ const Resume = () => {
                     </p>
                     <p style={{ color: '#D0D0D0', fontSize: '0.9em', lineHeight: '1.3', margin: '0' }}>
                         React-based tic-tac-toe game: HTML, CSS, React (Vite).
-                    </p>
-                </div>
-                <div style={{ marginBottom: '8px' }}>
-                    <h3 style={{ color: '#FFFFFF', fontSize: '1.1em', margin: '0 0 2px', fontWeight: '600' }}>
-                        Adaptive Web Page
-                    </h3>
-                    <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0', fontStyle: 'italic' }}>
-                        <a href="https://hellagr.github.io/3-task-page" style={{ color: '#1E90FF' }}>Demo</a> |{' '}
-                        <a href="https://github.com/Hellagr/3-task-page" style={{ color: '#1E90FF' }}>GitHub</a>
-                    </p>
-                    <p style={{ color: '#D0D0D0', fontSize: '0.9em', lineHeight: '1.3', margin: '0' }}>
-                        Responsive web page: HTML, CSS, React (Vite).
                     </p>
                 </div>
                 <div>
@@ -319,10 +296,11 @@ const Resume = () => {
                             lineHeight: '1.4',
                         }}
                     >
-                        <li>Unity, C#, Git</li>
+                        <li>Unity, C#</li>
                         <li>HTML, CSS, JS</li>
                         <li>React, TypeScript, Node.js</li>
                         <li>MongoDB, IndexedDB</li>
+                        <li>Git</li>
                         <li>Bootstrap, Material UI, Redux</li>
                     </ul>
                 </div>
@@ -348,7 +326,7 @@ const Resume = () => {
                             lineHeight: '1.4',
                         }}
                     >
-                        <li>English (B1)</li>
+                        <li>English (B2)</li>
                         <li>Russian (Native)</li>
                         <li>Belarusian (Native)</li>
                         <li>Ukrainian</li>
