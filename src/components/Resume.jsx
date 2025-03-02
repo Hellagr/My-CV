@@ -4,7 +4,7 @@ const Resume = () => {
     // Functions to trigger file downloads for ENG and RU versions from the current site
     const handleDownloadEng = () => {
         // Use a relative path from the /public folder
-        const fileUrl = 'https://drive.google.com/uc?export=download&id=1cYKiG_ztOWXUC4-oBHNC6gY99TETMPNZ'; // Path to English resume in /public/TxtResume folder
+        const fileUrl = 'https://drive.google.com/uc?export=download&id=1hod5xVDxxf-cBe-SuvGGOd93FY1fxS_l'; // Path to English resume in /public/TxtResume folder
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = 'Aleh_Kushniarou_Resume_EN.docx'; // Updated to match .docx file extension
@@ -15,7 +15,7 @@ const Resume = () => {
 
     const handleDownloadRu = () => {
         // Use a relative path from the /public folder
-        const fileUrl = 'https://drive.google.com/uc?export=download&id=1OaQqa65p1ivvRRgQR150lhr1-olbPu5I'; // Path to Russian resume in /public/TxtResume folder
+        const fileUrl = 'https://drive.google.com/uc?export=download&id=1WlTuwhy9mFy1n8b2PTDS27SC1XzV1mQc'; // Path to Russian resume in /public/TxtResume folder
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = 'Aleh_Kushniarou_Resume_RU.docx'; // Updated to match .docx file extension
@@ -97,7 +97,7 @@ const Resume = () => {
                         System Administrator
                     </h3>
                     <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0 0 2px', fontStyle: 'italic' }}>
-                        OOO «Boho studio», Minsk | 2024 – Present
+                        Minsk | 2024 – Present
                     </p>
                     <p style={{ color: '#D0D0D0', fontSize: '0.9em', lineHeight: '1.3', margin: '0' }}>
                         Maintain PC software functionality and resolve OS issues, ensuring seamless system performance through proactive support and troubleshooting.
@@ -108,7 +108,7 @@ const Resume = () => {
                         Engineer of Materials and Technical Supply
                     </h3>
                     <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0 0 2px', fontStyle: 'italic' }}>
-                        Institut BELORGSTANKINPROM, Minsk | 2016 – 2023
+                        Minsk | 2016 – 2023
                     </p>
                     <p style={{ color: '#D0D0D0', fontSize: '0.9em', lineHeight: '1.3', margin: '0' }}>
                         Oversaw material procurement for production, driving efficiency with strong organizational skills.
@@ -136,14 +136,6 @@ const Resume = () => {
                         </h3>
                         <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0', fontStyle: 'italic' }}>
                             Minsk | 2012 – 2018
-                        </p>
-                    </div>
-                    <div>
-                        <h3 style={{ color: '#FFFFFF', fontSize: '1.1em', margin: '0 0 2px', fontWeight: '600' }}>
-                            BSUIR (Incomplete)
-                        </h3>
-                        <p style={{ color: '#B0B0B0', fontSize: '0.8em', margin: '0', fontStyle: 'italic' }}>
-                            Minsk | 1 Year
                         </p>
                     </div>
                 </div>
