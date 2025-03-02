@@ -2,8 +2,10 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from "react-i18next";
 
 const ProfileCard = () => {
+    const { t } = useTranslation();
     return (
         <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -25,7 +27,7 @@ const ProfileCard = () => {
         >
             <img
                 src="images/photo.jpg"
-                alt="Aleh Kushniarou"
+                alt={t("name")} // Use translated name here
                 className="profile-image"
                 style={{
                     width: '180px',
@@ -56,7 +58,7 @@ const ProfileCard = () => {
                     marginRight: 'auto'
                 }}
             >
-                Aleh Kushniarou
+                {t("name")} {/* Use translated name here */}
             </h2>
             <div
                 style={{

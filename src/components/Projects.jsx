@@ -1,38 +1,38 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next"; // Add this import
 
 const Projects = () => {
-    const snapshotVideos = [
-        { videoId: 'ugkbmyZDq-g', caption: 'Horror like game. Infinity floors' },
-        { videoId: 'MEPLc65_d2k', caption: 'Isometric. Displacement along the axis of movement' },
-        { videoId: 'AjQANLxZhhw', caption: 'Mario like game. Joints' },
-        { videoId: 'dW5DxvLuQuk', caption: 'Mesh generation. Prefabs are prohibited.' },
-    ];
+    const { t } = useTranslation(); // Add this hook
+
+    const snapshotVideos = t("snapshotCaptions", { returnObjects: true }); // Fetch array of captions
 
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="page-content"
-            style={{ fontFamily: 'Arial, sans-serif' }}
+            style={{ fontFamily: "Arial, sans-serif" }}
         >
             <h1
                 style={{
-                    color: '#007BFF',
-                    fontSize: '2.5em',
-                    marginBottom: '25px',
-                    fontWeight: 'bold',
-                    lineHeight: '1.2',
-                    textShadow: '0 2px 4px rgba(0, 0, 0, 0.05)',
-                    transition: 'transform 0.3s ease'
+                    color: "#007BFF",
+                    fontSize: "2.5em",
+                    marginBottom: "25px",
+                    fontWeight: "bold",
+                    lineHeight: "1.2",
+                    textShadow: "0 2px 4px rgba(0, 0, 0, 0.05)",
+                    transition: "transform 0.3s ease",
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            >Projects</h1>
+                onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.02)")}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            >
+                {t("projectsTitle")}
+            </h1>
 
             {/* Pet Projects Section */}
             <section className="pet-projects">
-                <h2 className="project-title">Still alive (current project)</h2>
+                <h2 className="project-title">{t("stillAliveTitle")}</h2>
                 <div className="project-video">
                     <iframe
                         width="100%"
@@ -43,16 +43,13 @@ const Projects = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
-                    {/* Fallback if video fails to load */}
-                    <p style={{ display: 'none', color: 'red' }} id="video-fallback">
+                    <p style={{ display: "none", color: "red" }} id="video-fallback">
                         Video blocked by ad blocker. Please disable it or allow YouTube to view content.
                     </p>
                 </div>
-                <p className="project-desc">
-                    Currently developing a 3D rogue-like shooter. This will be dynamic shooter with evolving player progression. Built using Unity and C#, with plans to release on Steam.
-                </p>
+                <p className="project-desc">{t("stillAliveDesc")}</p>
 
-                <h2 className="project-title">Count Battle</h2>
+                <h2 className="project-title">{t("countBattleTitle")}</h2>
                 <div className="project-video">
                     <iframe
                         width="100%"
@@ -62,18 +59,16 @@ const Projects = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
-                    <p style={{ display: 'none', color: 'red' }} id="video-fallback">
+                    <p style={{ display: "none", color: "red" }} id="video-fallback">
                         Video blocked by ad blocker. Please disable it or allow YouTube to view content.
                     </p>
                 </div>
-                <p className="project-desc">
-                    A casual game where you pick the right answer to simple equations. Perfect for kids and students to practice math, or adults looking to test their school-day memory.
-                </p>
+                <p className="project-desc">{t("countBattleDesc")}</p>
             </section>
 
             {/* Homework Videos Section */}
             <section className="homework-videos">
-                <h2 className="project-title">Some Interesting Things I have Worked On</h2>
+                <h2 className="project-title">{t("interestingThingsTitle")}</h2>
                 <div className="video-grid">
                     {snapshotVideos.map((video, i) => (
                         <div key={i} className="video-item">
@@ -86,10 +81,10 @@ const Projects = () => {
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                             ></iframe>
-                            <p style={{ display: 'none', color: 'red' }} id="video-fallback">
+                            <p style={{ display: "none", color: "red" }} id="video-fallback">
                                 Video blocked by ad blocker. Please disable it or allow YouTube to view content.
                             </p>
-                            <p className="video-caption">{video.caption}</p>
+                            <p className="video-caption">{video}</p>
                         </div>
                     ))}
                 </div>

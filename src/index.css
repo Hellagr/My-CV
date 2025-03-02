@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-  padding: "15px 0";
+  padding: 15px 0; /* Removed quotes */
   background-color: var(--header-bg);
   border-bottom: 1px solid var(--border-color);
   position: relative;
@@ -25,38 +25,39 @@ body {
 
 @media (max-width: 550px) {
   .header-title h1 {
-    font-size: 1.5rem !important; /* 75% of 2rem */
+    font-size: 1.5rem !important;
   }
 
   .header-title .header-name {
-    font-size: 1.05rem !important; /* 75% of 1.4rem */
+    font-size: 1.05rem !important;
   }
 
   .header-title .game-developer {
-    font-size: 0.825rem !important; /* 75% of 1.1rem */
+    font-size: 0.825rem !important;
   }
 
-  .nav-links li a {
-    font-size: 0.675rem !important; /* 75% of 0.9rem */
+  .nav-links li a,
+  .nav-links li button {
+    font-size: 0.675rem !important;
   }
 
   .nav-toggle,
   .header button {
-    font-size: 0.9rem !important; /* 75% of 1.2rem and 1.5rem */
+    font-size: 0.9rem !important;
   }
 
   .nav {
-    gap: 30px; /* 75% of 40px */
-    padding: 0 15px; /* 75% of 20px */
+    gap: 30px;
+    padding: 0 15px;
   }
 
   .nav-links {
-    gap: 15px; /* 75% of 20px */
+    gap: 15px;
   }
 
   .header-title .game-developer {
-    margin-left: 1.125rem !important; /* 75% of 1.5rem */
-    margin-bottom: 1.125rem !important; /* 75% of 1.5rem */
+    margin-left: 1.125rem !important;
+    margin-bottom: 1.125rem !important;
   }
 }
 
@@ -78,14 +79,14 @@ body {
 
 .nav-links {
   list-style: none;
-  display: flex; /* Default for large screens */
+  display: flex;
   gap: 20px;
   margin: 0;
   padding: 0;
 }
 
 .nav-toggle {
-  display: none; /* Hidden by default */
+  display: none;
 }
 
 .nav-links li a {
@@ -102,6 +103,24 @@ body {
   color: #0056b3;
 }
 
+/* Style the language switcher button */
+.nav-links li button {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9em;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease, background 0.3s ease;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-links li button:hover {
+  color: var(--accent-color);
+  background: rgba(0, 123, 255, 0.1);
+}
+
 .content {
   display: flex;
   justify-content: space-between;
@@ -109,17 +128,17 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   background-color: var(--background);
-  flex-wrap: nowrap; /* Add this to prevent wrapping by default */
+  flex-wrap: nowrap;
   margin-top: 80px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1160px) {
   .nav-toggle {
-    display: block; /* Show toggle button below 1050px */
+    display: block;
   }
 
   .nav-links {
-    display: none; /* Hide links by default */
+    display: none;
     position: absolute;
     top: 100%;
     right: 20px;
@@ -132,7 +151,7 @@ body {
   }
 
   .nav-links.nav-open {
-    display: flex; /* Show when toggled */
+    display: flex;
     flex-direction: column;
   }
 
@@ -140,7 +159,8 @@ body {
     width: 100%;
   }
 
-  .nav-links li a {
+  .nav-links li a,
+  .nav-links li button {
     display: block;
     padding: 8px 0;
     width: 100%;
@@ -149,7 +169,7 @@ body {
 
 @media (max-width: 851px) {
   .content {
-    flex-wrap: wrap; /* Wrap only when below 851px */
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -160,7 +180,6 @@ body {
   background-color: #e9e8e2;
   padding: 20px;
   border-radius: 10px;
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
   width: 300px;
   text-align: center;
   position: relative;
@@ -170,7 +189,7 @@ body {
 }
 
 .profile-card:hover {
-  transform: translateY(-2px); /* Subtler lift */
+  transform: translateY(-2px);
 }
 
 .profile-image {
@@ -185,7 +204,7 @@ body {
 }
 
 .profile-image:hover {
-  transform: scale(1.02); /* Subtler scale */
+  transform: scale(1.02);
 }
 
 .social-links {
@@ -211,7 +230,6 @@ body {
 .welcome-section {
   max-width: 600px;
   text-align: center;
-  /* padding-left: 50px; */
   flex: 1;
   transition: transform 0.3s ease;
 }
@@ -260,7 +278,7 @@ body {
 .welcome-section .buttons button:hover {
   background-color: #0056b3;
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-  transform: scale(1.05); /* Subtler scale */
+  transform: scale(1.05);
 }
 
 .welcome-section .buttons button:active {
@@ -274,35 +292,25 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0 10px;
-  /* transition: opacity 0.3s ease; */
 }
 
-/* .welcome-section p:hover {
-  opacity: 0.9; 
-} */
-
-/* Additional Pages Styling (AboutMe, Resume, Projects, Contact) */
 .page-content {
   max-width: 800px;
   margin: 20px auto 20px;
   padding: 20px 20px 40px;
   font-family: Arial, sans-serif;
   background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
-
-/* .page-content:hover { */
-/* transform: translateY(-2px); Subtler lift */
-/* } */
 
 .page-content h1 {
   color: #007bff;
   font-size: 2.5em;
   margin-bottom: 25px;
   font-weight: bold;
-  line-height: 1.2;
+  lineheight: 1.2;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
@@ -345,10 +353,6 @@ body {
   transition: opacity 0.3s ease;
 }
 
-/* .page-content p:hover {
-  opacity: 0.9; /* Subtler opacity */
-/* } */
-
 .page-content ul {
   color: #000000;
   font-size: 1.1em;
@@ -357,11 +361,11 @@ body {
   margin-bottom: 20px;
   line-height: 1.5;
   transition: opacity 0.3s ease;
-  color: var(--text-secondary) !important; /* #333333 in light mode */
+  color: var(--text-secondary) !important;
 }
 
 .dark .page-content ul {
-  color: var(--text-secondary) !important; /* #b0b0b0 in dark mode */
+  color: var(--text-secondary) !important;
 }
 
 .page-content ul a {
@@ -371,10 +375,6 @@ body {
 .page-content ul a:hover {
   color: var(--text-primary) !important;
 }
-
-/* .page-content ul:hover {
-  opacity: 0.9;
-} */
 
 .page-content li {
   margin-bottom: 10px;
@@ -391,7 +391,6 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .header {
     padding: 10px 0;
@@ -407,7 +406,6 @@ body {
   }
 
   .nav {
-    /* flex-direction: column; */
     gap: 10px;
     padding: 0 10px;
   }
@@ -421,10 +419,6 @@ body {
     gap: 10px;
     align-items: center;
   }
-
-  /* .nav-links li a {
-    font-size: 0.9em;
-  } */
 
   .content {
     padding: 20px;
@@ -470,7 +464,6 @@ body {
   }
 
   .page-content {
-    /* margin: 100px auto 20px; */
     padding: 15px;
     max-width: 90%;
   }
@@ -541,7 +534,6 @@ body {
   }
 }
 
-/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
@@ -549,24 +541,22 @@ body {
   }
 }
 
-/* Default (Light Mode) */
 :root {
   --header-bg: #ffffff;
   --card-bg: #fff5ed;
   --text-primary: #000000;
-  --text-secondary: #000000; /* Darker gray for light mode readability */
+  --text-secondary: #000000;
   --accent-color: #007bff;
   --border-color: #000000;
   --background: #ffffff;
   --button-bg: #ffffff;
 }
 
-/* Dark Mode */
 .dark {
   --header-bg: #1a1a1a;
   --card-bg: #2a2a2a;
   --text-primary: #ffffff;
-  --text-secondary: #ffffff; /* Light gray for dark mode */
+  --text-secondary: #ffffff;
   --accent-color: #1e90ff;
   --border-color: #ffffff;
   --background: #121212;
@@ -588,7 +578,6 @@ body {
   color: var(--text-primary);
 }
 
-/* ProfileCard Overrides */
 .profile-card {
   background-color: var(--card-bg) !important;
   color: var(--text-primary);
@@ -618,7 +607,6 @@ body {
   background-color: var(--accent-color) !important;
 }
 
-/* Header Overrides */
 .header {
   background-color: var(--header-bg);
   border-bottom: 1px solid var(--border-color);
@@ -640,7 +628,6 @@ body {
   color: var(--accent-color) !important;
 }
 
-/* WelcomeSection Overrides */
 .welcome-section {
   color: var(--text-primary);
 }
@@ -664,7 +651,6 @@ body {
   color: #ffffff !important;
 }
 
-/* Ensure page-content respects theme */
 .page-content {
   background-color: var(--background) !important;
   color: var(--text-primary) !important;
@@ -694,7 +680,6 @@ body {
   color: var(--text-primary) !important;
 }
 
-/* Certificates Specific Overrides */
 .page-content div[style*="background: '#fff'"] {
   background: var(--card-bg) !important;
 }
@@ -703,12 +688,10 @@ body {
   color: var(--text-secondary) !important;
 }
 
-/* Resume Specific Overrides */
 .page-content ul[style*="color: '#000000'"] {
-  color: var(--text-primary) !important; /* Override inline #000000 */
+  color: var(--text-primary) !important;
 }
 
-/* Footer Overrides */
 .footer {
   background-color: var(--header-bg) !important;
   border-top: 1px solid var(--border-color) !important;
@@ -722,7 +705,6 @@ body {
   background-color: var(--background);
 }
 
-/* Pet Projects Section */
 .pet-projects {
   margin-bottom: 40px;
 }
@@ -742,7 +724,7 @@ body {
 
 .project-video {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   margin-bottom: 15px;
@@ -771,7 +753,6 @@ body {
   opacity: 0.8;
 }
 
-/* Homework Videos Section */
 .homework-videos {
   margin-top: 40px;
 }
@@ -807,7 +788,6 @@ body {
   text-align: center;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .project-video {
     padding-bottom: 75%;
@@ -836,7 +816,6 @@ body {
   }
 }
 
-/* Dark Mode Overrides */
 .dark .video-item {
   background-color: #2a2a2a;
 }
@@ -845,4 +824,47 @@ body {
 .dark .project-desc,
 .dark .video-caption {
   color: #ffffff;
+}
+
+/* Style the language switcher button */
+.language-switcher {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.8em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: transform 0.3s ease; /* Only scale transition */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 80px;
+  min-width: 80px;
+  background: var(--button-bg); /* Consistent background */
+}
+
+/* No color or background change on hover */
+.language-switcher:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure consistent behavior in mobile menu */
+@media (max-width: 1050px) {
+  .nav-links li .language-switcher {
+    display: flex;
+    padding: 8px 0;
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 5px;
+  }
+}
+
+/* Adjust font size at smaller breakpoints */
+@media (max-width: 550px) {
+  .nav-links li .language-switcher {
+    font-size: 0.6rem !important;
+    width: 60px;
+    min-width: 60px;
+    padding: 4px 6px;
+  }
 }
