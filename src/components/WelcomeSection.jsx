@@ -12,14 +12,14 @@ const WelcomeSection = () => {
     const buttonStyle = {
         backgroundColor: "var(--button-bg)",
         color: "var(--text-primary)",
-        padding: "10px 20px", // Exact original size
-        margin: "5px", // Exact original margin
+        padding: "10px 20px",
+        margin: "5px",
         borderRadius: "20px",
         cursor: "pointer",
         border: "1px solid var(--border-color)",
-        fontSize: "1em", // Exact original font size
+        fontSize: "1em",
         fontFamily: "Arial, sans-serif",
-        fontWeight: "300", // Exact original font weight
+        fontWeight: "300",
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
         transition: "all 0.3s ease",
         position: "relative",
@@ -43,6 +43,26 @@ const WelcomeSection = () => {
 
     const handleMouseUp = (buttonId) => {
         setTappedButton(null);
+    };
+
+    const handleDownloadEng = () => {
+        const fileUrl = "https://drive.google.com/uc?export=download&id=1hod5xVDxxf-cBe-SuvGGOd93FY1fxS_l";
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.download = "Aleh_Kushniarou_Resume_EN.docx";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    const handleDownloadRu = () => {
+        const fileUrl = "https://drive.google.com/uc?export=download&id=1WlTuwhy9mFy1n8b2PTDS27SC1XzV1mQc";
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.download = "Aleh_Kushniarou_Resume_RU.docx";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (
@@ -91,7 +111,7 @@ const WelcomeSection = () => {
                     onMouseDown={() => handleMouseDown("about")}
                     onMouseUp={() => handleMouseUp("about")}
                     onClick={() => navigate("/about")}
-                    className="motion-button" // For CSS
+                    className="motion-button"
                 >
                     {t("aboutMeButton")}
                 </motion.button>
@@ -106,7 +126,7 @@ const WelcomeSection = () => {
                     onMouseDown={() => handleMouseDown("projects")}
                     onMouseUp={() => handleMouseUp("projects")}
                     onClick={() => navigate("/projects")}
-                    className="motion-button" // For CSS
+                    className="motion-button"
                 >
                     {t("projectsButton")}
                 </motion.button>
@@ -121,7 +141,7 @@ const WelcomeSection = () => {
                     onMouseDown={() => handleMouseDown("certificates")}
                     onMouseUp={() => handleMouseUp("certificates")}
                     onClick={() => navigate("/certificates")}
-                    className="motion-button" // For CSS
+                    className="motion-button"
                 >
                     {t("certificatesButton")}
                 </motion.button>
@@ -139,6 +159,47 @@ const WelcomeSection = () => {
             >
                 {t("welcomeText")}
             </p>
+            <div
+                className="resume-buttons"
+                style={{
+                    margin: "20px 0",
+                    display: "flex",
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                    gap: "10px",
+                }}
+            >
+                <motion.button
+                    animate={{
+                        scale: hoveredButton === "downloadEng" ? 1.05 : tappedButton === "downloadEng" ? 0.98 : 1,
+                    }}
+                    transition={{ duration: 0.1 }}
+                    style={buttonStyle}
+                    onMouseEnter={(e) => handleMouseEnter(e, "downloadEng")}
+                    onMouseLeave={(e) => handleMouseLeave(e, "downloadEng")}
+                    onMouseDown={() => handleMouseDown("downloadEng")}
+                    onMouseUp={() => handleMouseUp("downloadEng")}
+                    onClick={handleDownloadEng}
+                    className="motion-button"
+                >
+                    {t("downloadEng")}
+                </motion.button>
+                <motion.button
+                    animate={{
+                        scale: hoveredButton === "downloadRu" ? 1.05 : tappedButton === "downloadRu" ? 0.98 : 1,
+                    }}
+                    transition={{ duration: 0.1 }}
+                    style={buttonStyle}
+                    onMouseEnter={(e) => handleMouseEnter(e, "downloadRu")}
+                    onMouseLeave={(e) => handleMouseLeave(e, "downloadRu")}
+                    onMouseDown={() => handleMouseDown("downloadRu")}
+                    onMouseUp={() => handleMouseUp("downloadRu")}
+                    onClick={handleDownloadRu}
+                    className="motion-button"
+                >
+                    {t("downloadRu")}
+                </motion.button>
+            </div>
         </motion.section>
     );
 };
