@@ -29,7 +29,7 @@ const resources = {
             aboutMeButton: "About Me",
             projectsButton: "Projects",
             certificatesButton: "Certificates",
-            welcomeText: "Looking for a junior developer or intern role. Transitioning into game dev and diving into the industry. Currently building an indie project — a 3D rogue-like shooter.",
+            welcomeText: "Looking for a job as a Unity junior developer or intern. Currently, I’m working on my indie project — a 3D rogue-like shooter",
             // Add Projects translations
             projectsTitle: "Projects",
             stillAliveTitle: "Still alive (current project)",
@@ -116,7 +116,7 @@ const resources = {
             aboutMeButton: "Обо мне",
             projectsButton: "Проекты",
             certificatesButton: "Сертификаты",
-            welcomeText: "Ищу работу junior-разработчиком или стажером. Переключился на геймдев и осваиваю индустрию. Сейчас создаю инди-проект — 3D rogue-like шутер.",
+            welcomeText: "Ищу работу Unity junior-разработчиком или стажером. Сейчас работаю над своим инди-проектом — 3D rogue-like шутер.",
             // Add Projects translations
             projectsTitle: "Проекты",
             stillAliveTitle: "Still alive (текущий проект)",

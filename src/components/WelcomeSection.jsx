@@ -1,9 +1,49 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next"; // Add this import
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 const WelcomeSection = () => {
-    const { t } = useTranslation(); // Add this hook
+    const { t } = useTranslation();
+    const navigate = useNavigate();
+    const [hoveredButton, setHoveredButton] = useState(null);
+    const [tappedButton, setTappedButton] = useState(null);
+
+    const buttonStyle = {
+        backgroundColor: "var(--button-bg)",
+        color: "var(--text-primary)",
+        padding: "10px 20px", // Exact original size
+        margin: "5px", // Exact original margin
+        borderRadius: "20px",
+        cursor: "pointer",
+        border: "1px solid var(--border-color)",
+        fontSize: "1em", // Exact original font size
+        fontFamily: "Arial, sans-serif",
+        fontWeight: "300", // Exact original font weight
+        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+        transition: "all 0.3s ease",
+        position: "relative",
+    };
+
+    const handleMouseEnter = (e, buttonId) => {
+        setHoveredButton(buttonId);
+        e.currentTarget.style.backgroundColor = "var(--accent-color)";
+        e.currentTarget.style.color = "#FFFFFF";
+    };
+
+    const handleMouseLeave = (e, buttonId) => {
+        setHoveredButton(null);
+        e.currentTarget.style.backgroundColor = "var(--button-bg)";
+        e.currentTarget.style.color = "var(--text-primary)";
+    };
+
+    const handleMouseDown = (buttonId) => {
+        setTappedButton(buttonId);
+    };
+
+    const handleMouseUp = (buttonId) => {
+        setTappedButton(null);
+    };
 
     return (
         <motion.section
@@ -41,94 +81,49 @@ const WelcomeSection = () => {
                 }}
             >
                 <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                    style={{
-                        backgroundColor: "var(--button-bg)",
-                        color: "var(--text-primary)",
-                        padding: "10px 20px",
-                        margin: "5px",
-                        borderRadius: "20px",
-                        cursor: "pointer",
-                        border: "1px solid var(--border-color)",
-                        fontSize: "1em",
-                        fontFamily: "Arial, sans-serif",
-                        fontWeight: "300",
-                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                        transition: "all 0.3s ease",
+                    animate={{
+                        scale: hoveredButton === "about" ? 1.05 : tappedButton === "about" ? 0.98 : 1,
                     }}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "var(--accent-color)";
-                        e.currentTarget.style.color = "#FFFFFF";
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "var(--button-bg)";
-                        e.currentTarget.style.color = "var(--text-primary)";
-                    }}
+                    transition={{ duration: 0.1 }}
+                    style={buttonStyle}
+                    onMouseEnter={(e) => handleMouseEnter(e, "about")}
+                    onMouseLeave={(e) => handleMouseLeave(e, "about")}
+                    onMouseDown={() => handleMouseDown("about")}
+                    onMouseUp={() => handleMouseUp("about")}
+                    onClick={() => navigate("/about")}
+                    className="motion-button" // For CSS
                 >
-                    <Link to="/about" style={{ color: "inherit", textDecoration: "none" }}>
-                        {t("aboutMeButton")}
-                    </Link>
+                    {t("aboutMeButton")}
                 </motion.button>
                 <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                    style={{
-                        backgroundColor: "var(--button-bg)",
-                        color: "var(--text-primary)",
-                        padding: "10px 20px",
-                        margin: "5px",
-                        borderRadius: "20px",
-                        cursor: "pointer",
-                        border: "1px solid var(--border-color)",
-                        fontSize: "1em",
-                        fontFamily: "Arial, sans-serif",
-                        fontWeight: "300",
-                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                        transition: "all 0.3s ease",
+                    animate={{
+                        scale: hoveredButton === "projects" ? 1.05 : tappedButton === "projects" ? 0.98 : 1,
                     }}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "var(--accent-color)";
-                        e.currentTarget.style.color = "#FFFFFF";
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "var(--button-bg)";
-                        e.currentTarget.style.color = "var(--text-primary)";
-                    }}
+                    transition={{ duration: 0.1 }}
+                    style={buttonStyle}
+                    onMouseEnter={(e) => handleMouseEnter(e, "projects")}
+                    onMouseLeave={(e) => handleMouseLeave(e, "projects")}
+                    onMouseDown={() => handleMouseDown("projects")}
+                    onMouseUp={() => handleMouseUp("projects")}
+                    onClick={() => navigate("/projects")}
+                    className="motion-button" // For CSS
                 >
-                    <Link to="/projects" style={{ color: "inherit", textDecoration: "none" }}>
-                        {t("projectsButton")}
-                    </Link>
+                    {t("projectsButton")}
                 </motion.button>
                 <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                    style={{
-                        backgroundColor: "var(--button-bg)",
-                        color: "var(--text-primary)",
-                        padding: "10px 20px",
-                        margin: "5px",
-                        borderRadius: "20px",
-                        cursor: "pointer",
-                        border: "1px solid var(--border-color)",
-                        fontSize: "1em",
-                        fontFamily: "Arial, sans-serif",
-                        fontWeight: "300",
-                        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                        transition: "all 0.3s ease",
+                    animate={{
+                        scale: hoveredButton === "certificates" ? 1.05 : tappedButton === "certificates" ? 0.98 : 1,
                     }}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "var(--accent-color)";
-                        e.currentTarget.style.color = "#FFFFFF";
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "var(--button-bg)";
-                        e.currentTarget.style.color = "var(--text-primary)";
-                    }}
+                    transition={{ duration: 0.1 }}
+                    style={buttonStyle}
+                    onMouseEnter={(e) => handleMouseEnter(e, "certificates")}
+                    onMouseLeave={(e) => handleMouseLeave(e, "certificates")}
+                    onMouseDown={() => handleMouseDown("certificates")}
+                    onMouseUp={() => handleMouseUp("certificates")}
+                    onClick={() => navigate("/certificates")}
+                    className="motion-button" // For CSS
                 >
-                    <Link to="/certificates" style={{ color: "inherit", textDecoration: "none" }}>
-                        {t("certificatesButton")}
-                    </Link>
+                    {t("certificatesButton")}
                 </motion.button>
             </div>
             <p
