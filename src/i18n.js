@@ -38,10 +38,10 @@ const resources = {
             countBattleDesc: "A casual game where you pick the right answer to simple equations. Perfect for kids and students to practice math, or adults looking to test their school-day memory.",
             interestingThingsTitle: "Some Interesting Things I have Worked On",
             snapshotCaptions: [
-                "Horror like game. Infinity floors",
-                "Isometric. Displacement along the axis of movement",
-                "Mario like game. Joints",
-                "Mesh generation. Prefabs are prohibited.",
+                { videoId: "ugkbmyZDq-g", caption: "Horror like game. Infinity floors" },
+                { videoId: "MEPLc65_d2k", caption: "Isometric. Displacement along the axis of movement" },
+                { videoId: "AjQANLxZhhw", caption: "Mario like game. Joints" },
+                { videoId: "dW5DxvLuQuk", caption: "Mesh generation. Prefabs are prohibited." },
             ],
             // Add Certificates translations
             certificatesTitle: "Certificates",
@@ -125,10 +125,10 @@ const resources = {
             countBattleDesc: "Казуальная игра, где нужно выбрать правильный ответ на простые уравнения. Идеально подходит для детей и студентов для практики математики или для взрослых, желающих проверить свои школьные знания.",
             interestingThingsTitle: "Некоторые интересные вещи, над которыми я работал",
             snapshotCaptions: [
-                "Horror like game. Бесконечные этажи",
-                "Isometric. Смещение по оси движения",
-                "Mario like game. Joints",
-                "Mesh generation. Префабы запрещены."
+                { videoId: "ugkbmyZDq-g", caption: "Horror like game. Бесконечные этажи" },
+                { videoId: "MEPLc65_d2k", caption: "Isometric. Смещение по оси движения" },
+                { videoId: "AjQANLxZhhw", caption: "Mario like game. Joints" },
+                { videoId: "dW5DxvLuQuk", caption: "Mesh generation. Префабы запрещены." }
             ],
             // Add Certificates translations
             certificatesTitle: "Сертификаты",

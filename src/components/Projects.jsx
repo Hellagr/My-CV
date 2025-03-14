@@ -5,6 +5,7 @@ const Projects = () => {
     const { t } = useTranslation(); // Add this hook
 
     const snapshotVideos = t("snapshotCaptions", { returnObjects: true }); // Fetch array of captions
+    console.log("snapshotVideos:", snapshotVideos);
 
     return (
         <motion.div
@@ -39,7 +40,6 @@ const Projects = () => {
                         height="315"
                         src="https://www.youtube.com/embed/Qqc1XkinqSE?modestbranding=1&rel=0"
                         title="3D Rogue-Like Shooter Demo"
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     ></iframe>
@@ -74,17 +74,15 @@ const Projects = () => {
                         <div key={i} className="video-item">
                             <iframe
                                 width="100%"
-                                height="150"
                                 src={`https://www.youtube.com/embed/${video.videoId}?modestbranding=1&rel=0`}
                                 title={`Experience ${i + 1}`}
-                                frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                             ></iframe>
                             <p style={{ display: "none", color: "red" }} id="video-fallback">
                                 Video blocked by ad blocker. Please disable it or allow YouTube to view content.
                             </p>
-                            <p className="video-caption">{video}</p>
+                            <p className="video-caption">{video.caption}</p>
                         </div>
                     ))}
                 </div>
