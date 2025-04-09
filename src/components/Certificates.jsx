@@ -18,6 +18,7 @@ const Certificates = () => {
     const certificateData = {
         [t("gameDevelopment")]: [
             { src: "images/cetificates/Mobile Game Development With Unity.jpg", title: "Mobile Game Development With Unity" },
+            { src: "images/cetificates/UnityUdemy.jpg", title: "C# Unity Game Developer 3D" }
         ],
         [t("programmingLanguages")]: [
             { src: "images/cetificates/Programming with Javascript.jpeg", title: "Programming with Javascript" },
