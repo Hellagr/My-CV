@@ -5,7 +5,7 @@ const Resume = () => {
     const { t } = useTranslation();
 
     const handleDownloadEng = () => {
-        const fileUrl = "https://drive.google.com/uc?export=download&id=1hod5xVDxxf-cBe-SuvGGOd93FY1fxS_l";
+        const fileUrl = "https://drive.google.com/file/d/1hod5xVDxxf-cBe-SuvGGOd93FY1fxS_l/view?usp=drive_link";
         const link = document.createElement("a");
         link.href = fileUrl;
         link.download = "Aleh_Kushniarou_Resume_EN.docx";
@@ -15,7 +15,7 @@ const Resume = () => {
     };
 
     const handleDownloadRu = () => {
-        const fileUrl = "https://drive.google.com/uc?export=download&id=1WlTuwhy9mFy1n8b2PTDS27SC1XzV1mQc";
+        const fileUrl = "https://drive.google.com/file/d/15Bh58R1LmcJdJ_UzyDECMoFY0K_SFpkE/view?usp=drive_link";
         const link = document.createElement("a");
         link.href = fileUrl;
         link.download = "Aleh_Kushniarou_Resume_RU.docx";
@@ -159,6 +159,12 @@ const Resume = () => {
                             columnWidth: "auto",
                         }}
                     >
+                        <li>
+                            C# Unity Developer 3D –{" "}
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7315749719954063360/" style={{ color: "#1E90FF" }}>
+                                Cert
+                            </a>
+                        </li>
                         <li>
                             Unity Game Dev –{" "}
                             <a href="https://www.linkedin.com/feed/update/urn:li:activity:7294752105150513153/" style={{ color: "#1E90FF" }}>

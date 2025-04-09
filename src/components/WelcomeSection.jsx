@@ -46,7 +46,7 @@ const WelcomeSection = () => {
     };
 
     const handleDownloadEng = () => {
-        const fileUrl = "https://drive.google.com/uc?export=download&id=1hod5xVDxxf-cBe-SuvGGOd93FY1fxS_l";
+        const fileUrl = "https://drive.google.com/file/d/1hod5xVDxxf-cBe-SuvGGOd93FY1fxS_l/view?usp=drive_link";
         const link = document.createElement("a");
         link.href = fileUrl;
         link.download = "Aleh_Kushniarou_Resume_EN.docx";
@@ -56,7 +56,7 @@ const WelcomeSection = () => {
     };
 
     const handleDownloadRu = () => {
-        const fileUrl = "https://drive.google.com/uc?export=download&id=1WlTuwhy9mFy1n8b2PTDS27SC1XzV1mQc";
+        const fileUrl = "https://drive.google.com/file/d/15Bh58R1LmcJdJ_UzyDECMoFY0K_SFpkE/view?usp=drive_link";
         const link = document.createElement("a");
         link.href = fileUrl;
         link.download = "Aleh_Kushniarou_Resume_RU.docx";
